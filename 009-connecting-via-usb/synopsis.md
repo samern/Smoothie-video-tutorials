@@ -83,12 +83,24 @@ For all older versions, the driver is required.
 Once the driver is installed, the Smoothieboard should be recognized both as a Mass Storage Device ( similar to a USB thumb drive ), allowing you to access the files on the SD cards {demonstrate}, as well as a Serial ( COM ) device, allowing you to send commands ( for example via Pronterface {demonstrate} ).
 
 ### Troubleshooting
+If the printer controller software does not appear to recognize the Smoothie, check:
+- Is there a COM port that the OS sees as the Smoothie?
+- Is the baudrate too high?
+- Do you have the wrong COM port (typically COM1 is NOT your printer)
+- Does the COM port appear in Device Manager (Windows)?
+- If running Windows 7, did the driver install properly (check Event Logs), if running Windows 10, drivers already there
 
-TODO
+If you are seeing an inability to run certain functions, it may be the baudrate, change or set to AUTO.
+If you are running OctoPrint, try a full refresh if you just connected the USB (after you started the software)
+If you are on OctoPrint, consider manually specifying the COM port instead of using the 'AUTO' setting
+As a general rule, power up the printer, then connect the USB, then start the software.  Allow the board to initialize (a second or two) between power up and plugging into the computer
+
+TODO?
 
 ## Authors
 
 If you contribute to this video in any way, please add your name to this list : 
 
 * Arthur Wolf
+* Samer Najia
 
